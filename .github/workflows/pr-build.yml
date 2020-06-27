@@ -20,5 +20,5 @@ jobs:
       - name: "Build via MSBuild"
         shell: cmd
         run: |
-          "msbuild /p:Configuration=Release /p:Platform="x64" 
+          "msbuild /p:Configuration=Release /p:Platform="x64" .\Source\Dolphin.sln
         
