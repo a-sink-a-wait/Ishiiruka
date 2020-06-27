@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Windows Build
 
 on:
   pull_request:
@@ -20,5 +20,5 @@ jobs:
       - name: "Build via MSBuild"
         shell: cmd
         run: |
-          "msbuild /p:Configuration=Release /p:Platform=x64 %GITHUB_WORKSPACE%\Source\Dolphin.sln"
+          "msbuild /p:Configuration=Release /p:Platform=x64 ${{%GITHUB_WORKSPACE%}}\Source\Dolphin.sln"
         
