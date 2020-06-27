@@ -15,9 +15,9 @@ jobs:
         uses: microsoft/setup-msbuild@v1
                     
       - name: "Install DirectX Sdk"
-        uses: crazy-max/ghaction-chocolatey@v1
-        with:
-          args: install directx-sdk
+        shell: cmd
+        run: |
+          choco install directx-sdk
       
       - name: "Checkout"
         uses: actions/checkout@v2.3.1
