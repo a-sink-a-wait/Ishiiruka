@@ -14,10 +14,10 @@ jobs:
       - name: "Setup MSBuild"
         uses: microsoft/setup-msbuild@v1
       
-      - name: "Setup DirectX"
-        shell: cmd
-        run: | 
-          Dism /online /add-capability /capabilityname:Tools.Graphics.DirectX~~~~0.0.1.0
+      - name: "Install DirectX Sdk"
+        uses: crazy-max/ghaction-chocolatey@v1
+        with:
+          args: install directx-sdk
       
       - name: "Checkout"
         uses: actions/checkout@v2.3.1
