@@ -24,11 +24,16 @@ jobs:
         run: |
           choco install directx-sdk
       
-      - name: "Checkout"
-        uses: actions/checkout@v2.3.1
-      
-      - name: "Build via MSBuild"
+      - name: "Print DirectX Path"
         shell: cmd
         run: |
-          msbuild /p:Configuration=Release /p:Platform=x64 ${{ github.workspace }}\Source\Dolphin.sln
+          echo %DXSDK_DIR%
+          
+      #- name: "Checkout"
+      #  uses: actions/checkout@v2.3.1
+      
+      #- name: "Build via MSBuild"
+      #  shell: cmd
+      #  run: |
+      #    msbuild /p:Configuration=Release /p:Platform=x64 ${{ github.workspace }}\Source\Dolphin.sln
         
