@@ -22,7 +22,7 @@ jobs:
       - name: "Install DirectX Sdk"
         shell: cmd
         run: |
-          choco install directx-sdk
+          choco install directx-sdk && refreshenv
       
       - name: "Print DirectX Path"
         shell: cmd
